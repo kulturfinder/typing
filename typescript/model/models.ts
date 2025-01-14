@@ -1,12 +1,31 @@
-{{#generateApis}}
 import localVarRequest from 'request';
-{{/generateApis}}
 
-{{#models}}
-{{#model}}
-export * from '{{{ classFilename }}}';
-{{/model}}
-{{/models}}
+export * from './dataportKulturfinderApiModelDataJwtTokenResponse';
+export * from './dataportKulturfinderApiModelDataLivingImageOffset';
+export * from './dataportKulturfinderApiModelDataReadBasicInstitute';
+export * from './dataportKulturfinderApiModelDataReadCategory';
+export * from './dataportKulturfinderApiModelDataReadClosedDay';
+export * from './dataportKulturfinderApiModelDataReadCommunication';
+export * from './dataportKulturfinderApiModelDataReadInstitute';
+export * from './dataportKulturfinderApiModelDataReadLivingImage';
+export * from './dataportKulturfinderApiModelDataReadMedia';
+export * from './dataportKulturfinderApiModelDataReadOpenedTimes';
+export * from './dataportKulturfinderApiModelDataReadOpeningHours';
+export * from './dataportKulturfinderApiModelDataReadRegion';
+export * from './dataportKulturfinderApiModelDataReadTag';
+export * from './dataportKulturfinderApiModelDataUser';
+export * from './dataportKulturfinderApiModelDataUserNewPassword';
+export * from './dataportKulturfinderApiModelDataWriteCategoryMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteClosedDayMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteInstituteMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteLivingImage';
+export * from './dataportKulturfinderApiModelDataWriteMediaMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteOpeningHoursMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteRegionMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteTagMultiLingual';
+export * from './dataportKulturfinderApiModelDataWriteTranslation';
+export * from './dataportKulturfinderApiModelEnumsMediaType';
+export * from './microsoftAspNetCoreMvcProblemDetails';
 
 import * as fs from 'fs';
 
@@ -20,14 +39,33 @@ export interface RequestDetailedFile {
 
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
-{{! Object serialization only relevant if generating APIs, too }}
-{{#generateApis}}
 
-{{#models}}
-{{#model}}
-import { {{classname}} } from '{{{ classFilename }}}';
-{{/model}}
-{{/models}}
+import { DataportKulturfinderApiModelDataJwtTokenResponse } from './dataportKulturfinderApiModelDataJwtTokenResponse';
+import { DataportKulturfinderApiModelDataLivingImageOffset } from './dataportKulturfinderApiModelDataLivingImageOffset';
+import { DataportKulturfinderApiModelDataReadBasicInstitute } from './dataportKulturfinderApiModelDataReadBasicInstitute';
+import { DataportKulturfinderApiModelDataReadCategory } from './dataportKulturfinderApiModelDataReadCategory';
+import { DataportKulturfinderApiModelDataReadClosedDay } from './dataportKulturfinderApiModelDataReadClosedDay';
+import { DataportKulturfinderApiModelDataReadCommunication } from './dataportKulturfinderApiModelDataReadCommunication';
+import { DataportKulturfinderApiModelDataReadInstitute } from './dataportKulturfinderApiModelDataReadInstitute';
+import { DataportKulturfinderApiModelDataReadLivingImage } from './dataportKulturfinderApiModelDataReadLivingImage';
+import { DataportKulturfinderApiModelDataReadMedia } from './dataportKulturfinderApiModelDataReadMedia';
+import { DataportKulturfinderApiModelDataReadOpenedTimes } from './dataportKulturfinderApiModelDataReadOpenedTimes';
+import { DataportKulturfinderApiModelDataReadOpeningHours } from './dataportKulturfinderApiModelDataReadOpeningHours';
+import { DataportKulturfinderApiModelDataReadRegion } from './dataportKulturfinderApiModelDataReadRegion';
+import { DataportKulturfinderApiModelDataReadTag } from './dataportKulturfinderApiModelDataReadTag';
+import { DataportKulturfinderApiModelDataUser } from './dataportKulturfinderApiModelDataUser';
+import { DataportKulturfinderApiModelDataUserNewPassword } from './dataportKulturfinderApiModelDataUserNewPassword';
+import { DataportKulturfinderApiModelDataWriteCategoryMultiLingual } from './dataportKulturfinderApiModelDataWriteCategoryMultiLingual';
+import { DataportKulturfinderApiModelDataWriteClosedDayMultiLingual } from './dataportKulturfinderApiModelDataWriteClosedDayMultiLingual';
+import { DataportKulturfinderApiModelDataWriteInstituteMultiLingual } from './dataportKulturfinderApiModelDataWriteInstituteMultiLingual';
+import { DataportKulturfinderApiModelDataWriteLivingImage } from './dataportKulturfinderApiModelDataWriteLivingImage';
+import { DataportKulturfinderApiModelDataWriteMediaMultiLingual } from './dataportKulturfinderApiModelDataWriteMediaMultiLingual';
+import { DataportKulturfinderApiModelDataWriteOpeningHoursMultiLingual } from './dataportKulturfinderApiModelDataWriteOpeningHoursMultiLingual';
+import { DataportKulturfinderApiModelDataWriteRegionMultiLingual } from './dataportKulturfinderApiModelDataWriteRegionMultiLingual';
+import { DataportKulturfinderApiModelDataWriteTagMultiLingual } from './dataportKulturfinderApiModelDataWriteTagMultiLingual';
+import { DataportKulturfinderApiModelDataWriteTranslation } from './dataportKulturfinderApiModelDataWriteTranslation';
+import { DataportKulturfinderApiModelEnumsMediaType } from './dataportKulturfinderApiModelEnumsMediaType';
+import { MicrosoftAspNetCoreMvcProblemDetails } from './microsoftAspNetCoreMvcProblemDetails';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -42,30 +80,35 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-    {{#models}}
-        {{#model}}
-            {{#hasEnums}}
-                {{#vars}}
-                    {{#isEnum}}
-        {{#isContainer}}"{{classname}}.{{enumName}}": {{classname}}.{{enumName}}{{/isContainer}}{{^isContainer}}"{{datatypeWithEnum}}": {{datatypeWithEnum}}{{/isContainer}},
-                    {{/isEnum}}
-                {{/vars}}
-            {{/hasEnums}}
-            {{#isEnum}}
-        "{{classname}}": {{classname}},
-            {{/isEnum}}
-        {{/model}}
-    {{/models}}
+        "DataportKulturfinderApiModelEnumsMediaType": DataportKulturfinderApiModelEnumsMediaType,
 }
 
 let typeMap: {[index: string]: any} = {
-    {{#models}}
-        {{#model}}
-            {{^isEnum}}
-    "{{classname}}": {{classname}},
-            {{/isEnum}}
-        {{/model}}
-    {{/models}}
+    "DataportKulturfinderApiModelDataJwtTokenResponse": DataportKulturfinderApiModelDataJwtTokenResponse,
+    "DataportKulturfinderApiModelDataLivingImageOffset": DataportKulturfinderApiModelDataLivingImageOffset,
+    "DataportKulturfinderApiModelDataReadBasicInstitute": DataportKulturfinderApiModelDataReadBasicInstitute,
+    "DataportKulturfinderApiModelDataReadCategory": DataportKulturfinderApiModelDataReadCategory,
+    "DataportKulturfinderApiModelDataReadClosedDay": DataportKulturfinderApiModelDataReadClosedDay,
+    "DataportKulturfinderApiModelDataReadCommunication": DataportKulturfinderApiModelDataReadCommunication,
+    "DataportKulturfinderApiModelDataReadInstitute": DataportKulturfinderApiModelDataReadInstitute,
+    "DataportKulturfinderApiModelDataReadLivingImage": DataportKulturfinderApiModelDataReadLivingImage,
+    "DataportKulturfinderApiModelDataReadMedia": DataportKulturfinderApiModelDataReadMedia,
+    "DataportKulturfinderApiModelDataReadOpenedTimes": DataportKulturfinderApiModelDataReadOpenedTimes,
+    "DataportKulturfinderApiModelDataReadOpeningHours": DataportKulturfinderApiModelDataReadOpeningHours,
+    "DataportKulturfinderApiModelDataReadRegion": DataportKulturfinderApiModelDataReadRegion,
+    "DataportKulturfinderApiModelDataReadTag": DataportKulturfinderApiModelDataReadTag,
+    "DataportKulturfinderApiModelDataUser": DataportKulturfinderApiModelDataUser,
+    "DataportKulturfinderApiModelDataUserNewPassword": DataportKulturfinderApiModelDataUserNewPassword,
+    "DataportKulturfinderApiModelDataWriteCategoryMultiLingual": DataportKulturfinderApiModelDataWriteCategoryMultiLingual,
+    "DataportKulturfinderApiModelDataWriteClosedDayMultiLingual": DataportKulturfinderApiModelDataWriteClosedDayMultiLingual,
+    "DataportKulturfinderApiModelDataWriteInstituteMultiLingual": DataportKulturfinderApiModelDataWriteInstituteMultiLingual,
+    "DataportKulturfinderApiModelDataWriteLivingImage": DataportKulturfinderApiModelDataWriteLivingImage,
+    "DataportKulturfinderApiModelDataWriteMediaMultiLingual": DataportKulturfinderApiModelDataWriteMediaMultiLingual,
+    "DataportKulturfinderApiModelDataWriteOpeningHoursMultiLingual": DataportKulturfinderApiModelDataWriteOpeningHoursMultiLingual,
+    "DataportKulturfinderApiModelDataWriteRegionMultiLingual": DataportKulturfinderApiModelDataWriteRegionMultiLingual,
+    "DataportKulturfinderApiModelDataWriteTagMultiLingual": DataportKulturfinderApiModelDataWriteTagMultiLingual,
+    "DataportKulturfinderApiModelDataWriteTranslation": DataportKulturfinderApiModelDataWriteTranslation,
+    "MicrosoftAspNetCoreMvcProblemDetails": MicrosoftAspNetCoreMvcProblemDetails,
 }
 
 // Check if a string starts with another string without using es6 features
@@ -299,4 +342,3 @@ export class VoidAuth implements Authentication {
 }
 
 export type Interceptor = (requestOptions: localVarRequest.Options) => (Promise<void> | void);
-{{/generateApis}}

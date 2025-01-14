@@ -1,0 +1,12 @@
+generatorName: typescript-node
+inputSpec: https://kulturfindertest.dsecurecloud.de/api/swagger/v1/swagger.json
+outputDir: ./typescript/
+templateDir: ./templates/typescript/
+globalProperty: models,supportingFiles=
+additionalProperties:
+  skipApiGeneration: true
+  modelOnly: true
+  enumAsType: true
+  supportsES6: true
+  useSingleRequestParameter: true
+  withInterfaces: true
